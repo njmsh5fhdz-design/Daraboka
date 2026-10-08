@@ -1,1171 +1,2049 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>DRABOKA | Menu</title>
-
-  <meta name="theme-color" content="#070707">
-  <meta name="description" content="DRABOKA Coffee Menu">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-
-    :root {
-      --bg: #070707;
-      --card: #101010;
-      --card2: #141414;
-      --text: #f4efe8;
-      --muted: #aaa39a;
-      --gold: #c7a47a;
-      --gold-light: #e1c39c;
-      --line: rgba(199,164,122,.28);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background:
-        radial-gradient(
-          circle at 80% 10%,
-          rgba(199,164,122,.08),
-          transparent 25%
-        ),
-        radial-gradient(
-          circle at 10% 60%,
-          rgba(199,164,122,.05),
-          transparent 30%
-        ),
-        var(--bg);
-
-      color: var(--text);
-      font-family: Cairo, Arial, sans-serif;
-      min-height: 100vh;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-
-      background-image:
-        linear-gradient(
-          rgba(255,255,255,.018) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,.012) 1px,
-          transparent 1px
-        );
-
-      background-size: 45px 45px;
-      opacity: .25;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
 
-    /* ================= HEADER ================= */
+<meta charset="UTF-8">
 
-    header {
-      height: 78px;
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-      position: sticky;
-      top: 0;
-      z-index: 100;
+<meta name="theme-color"
+content="#070707">
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+<meta name="description"
+content="DRABOKA Coffee Menu">
 
-      padding: 0 5%;
+<title>DRABOKA | Menu</title>
 
-      border-bottom: 1px solid var(--line);
 
-      background: rgba(7,7,7,.88);
-      backdrop-filter: blur(16px);
-    }
+<!-- Google Fonts -->
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-      font-family: Montserrat, Arial;
-      font-weight: 600;
-      letter-spacing: 3px;
-    }
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-    .brand img {
-      width: 45px;
-      height: 45px;
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+rel="stylesheet">
 
-      border-radius: 50%;
-      object-fit: cover;
 
-      border: 1px solid var(--gold);
-    }
+<style>
 
-    nav {
-      display: flex;
-      gap: 35px;
+/* =====================================================
+   GLOBAL
+===================================================== */
 
-      color: #b8b0a6;
-      font-size: 14px;
-    }
+:root{
 
-    nav a {
-      transition: .25s;
-    }
+--bg:#070707;
 
-    nav a:hover {
-      color: var(--gold-light);
-    }
+--card:#101010;
 
-    /* ================= HERO ================= */
+--card2:#141414;
 
-    .hero {
-      max-width: 1180px;
-      min-height: 650px;
+--text:#f4efe8;
 
-      margin: auto;
+--muted:#aaa39a;
 
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+--gold:#c7a47a;
 
-      align-items: center;
+--gold-light:#e1c39c;
 
-      padding: 70px 30px;
+--line:rgba(199,164,122,.28);
 
-      position: relative;
-    }
+}
 
-    .hero-content {
-      z-index: 2;
-    }
 
-    .hero-logo {
-      width: 130px;
-      height: 130px;
+*{
 
-      object-fit: cover;
-      border-radius: 50%;
+box-sizing:border-box;
 
-      border: 1px solid var(--gold-light);
+margin:0;
 
-      box-shadow:
-        0 0 50px rgba(199,164,122,.12);
-    }
+padding:0;
 
-    .eyebrow {
-      font-family: Montserrat, Arial;
+}
 
-      letter-spacing: 4px;
 
-      color: var(--gold);
+html{
 
-      font-size: 11px;
+scroll-behavior:smooth;
 
-      margin: 18px 0 8px;
-    }
+}
 
-    h1 {
-      font-family: Montserrat, Arial;
 
-      font-size: clamp(52px, 9vw, 105px);
+body{
 
-      letter-spacing: 10px;
+background:
 
-      font-weight: 600;
+radial-gradient(
+circle at 80% 10%,
+rgba(199,164,122,.08),
+transparent 25%
+),
 
-      line-height: 1;
-    }
+radial-gradient(
+circle at 10% 60%,
+rgba(199,164,122,.05),
+transparent 30%
+),
 
-    .hero-text {
-      font-size: 21px;
+var(--bg);
 
-      color: #c7c0b8;
+color:var(--text);
 
-      margin: 20px 0 30px;
-    }
+font-family:Cairo,Arial,sans-serif;
 
-    .hero-button {
-      display: inline-flex;
+min-height:100vh;
 
-      padding: 13px 28px;
+overflow-x:hidden;
 
-      border: 1px solid var(--gold);
+}
 
-      color: var(--gold-light);
 
-      transition: .25s;
-    }
+/* =====================================================
+   BACKGROUND GRID
+===================================================== */
 
-    .hero-button:hover {
-      background: var(--gold);
-      color: #080808;
-    }
+body::before{
 
-    /* ================= COFFEE ART ================= */
+content:"";
 
-    .hero-coffee {
-      height: 390px;
+position:fixed;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+inset:0;
 
-      position: relative;
-    }
+pointer-events:none;
 
-    .cup {
-      width: 245px;
-      height: 150px;
+background-image:
 
-      position: relative;
+linear-gradient(
+rgba(255,255,255,.018) 1px,
+transparent 1px
+),
 
-      border: 2px solid #4e4b47;
+linear-gradient(
+90deg,
+rgba(255,255,255,.012) 1px,
+transparent 1px
+);
 
-      border-radius:
-        0 0 120px 120px /
-        0 0 70px 70px;
+background-size:45px 45px;
 
-      background:
-        linear-gradient(
-          145deg,
-          #191919,
-          #050505
-        );
+opacity:.25;
 
-      box-shadow:
-        0 35px 70px rgba(0,0,0,.8);
-    }
+z-index:-3;
 
-    .cup::after {
-      content: "";
+}
 
-      position: absolute;
 
-      right: -65px;
-      top: 25px;
+/* =====================================================
+   LARGE WATERMARK
+===================================================== */
 
-      width: 70px;
-      height: 65px;
+.watermark{
 
-      border: 12px solid #262421;
+position:fixed;
 
-      border-left: 0;
+top:50%;
 
-      border-radius:
-        0 45px 45px 0;
-    }
+left:50%;
 
-    .coffee {
-      position: absolute;
+width:720px;
 
-      top: -12px;
-      left: 10px;
-      right: 10px;
+height:720px;
 
-      height: 28px;
+transform:
+translate(-50%,-50%);
 
-      border-radius: 50%;
+display:flex;
 
-      background:
-        radial-gradient(
-          ellipse at center,
-          #d2b086 0 8%,
-          #6b4932 10% 42%,
-          #24150f 65%
-        );
+align-items:center;
 
-      box-shadow:
-        0 8px 16px #000;
-    }
+justify-content:center;
 
-    /* ================= MENU ================= */
+pointer-events:none;
 
-    .menu-section {
-      max-width: 1180px;
+z-index:-1;
 
-      margin: auto;
+opacity:.035;
 
-      padding:
-        50px 30px
-        90px;
-    }
+}
 
-    .section-heading {
-      display: flex;
-      align-items: center;
 
-      gap: 20px;
+/* صورة العلامة المائية */
 
-      margin-bottom: 30px;
-    }
+.watermark img{
 
-    .section-heading > span {
-      font-family: Montserrat;
+width:100%;
 
-      color: var(--gold);
+height:100%;
 
-      font-size: 12px;
-    }
+object-fit:contain;
 
-    .section-heading h2 {
-      font-size: 42px;
-    }
+filter:
+grayscale(100%)
+contrast(.9);
 
-    .menu-grid {
-      display: grid;
+}
 
-      grid-template-columns:
-        1fr 1fr;
 
-      gap: 18px;
-    }
+/* =====================================================
+   HEADER
+===================================================== */
 
-    .menu-card {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(18,18,18,.96),
-          rgba(9,9,9,.96)
-        );
+header{
 
-      border: 1px solid var(--line);
+height:78px;
 
-      padding: 28px;
+position:sticky;
 
-      box-shadow:
-        0 20px 50px rgba(0,0,0,.18);
-    }
+top:0;
 
-    .wide {
-      grid-column: 1 / -1;
-    }
+z-index:100;
 
-    .card-head {
-      display: flex;
+display:flex;
 
-      align-items: center;
+align-items:center;
 
-      gap: 15px;
+justify-content:space-between;
 
-      border-bottom:
-        1px solid var(--line);
+padding:0 5%;
 
-      padding-bottom: 16px;
+border-bottom:
+1px solid var(--line);
 
-      margin-bottom: 12px;
-    }
+background:
+rgba(7,7,7,.88);
 
-    .icon {
-      font-size: 25px;
-      color: var(--gold-light);
-    }
+backdrop-filter:
+blur(16px);
 
-    .card-head h3 {
-      font-size: 25px;
-    }
+}
 
-    .card-head small {
-      font-family: Montserrat;
 
-      font-size: 10px;
+/* اللوجو */
 
-      letter-spacing: 2px;
+.brand{
 
-      color: var(--gold);
-    }
+display:flex;
 
-    ul {
-      list-style: none;
-    }
+align-items:center;
 
-    li {
-      display: flex;
+gap:12px;
 
-      justify-content: space-between;
+font-family:Montserrat,Arial;
 
-      gap: 20px;
+font-weight:600;
 
-      padding: 11px 0;
+letter-spacing:3px;
 
-      border-bottom:
-        1px dashed
-        rgba(255,255,255,.08);
-    }
+}
 
-    li:last-child {
-      border-bottom: 0;
-    }
 
-    li span {
-      font-size: 16px;
-    }
+.brand img{
 
-    li b {
-      font-family: Montserrat;
+width:46px;
 
-      font-size: 11px;
+height:46px;
 
-      font-weight: 400;
+object-fit:cover;
 
-      color: #8e8983;
+border-radius:50%;
 
-      direction: ltr;
-    }
+border:
+1px solid var(--gold);
 
-    /* ================= TWO COLUMNS ================= */
+box-shadow:
+0 0 20px rgba(199,164,122,.12);
 
-    .two-col {
-      display: grid;
+}
 
-      grid-template-columns:
-        1fr 1fr;
 
-      gap: 30px;
-    }
+.brand span{
 
-    /* ================= FOOD ================= */
+font-size:16px;
 
-    .food-grid {
-      display: grid;
+}
 
-      grid-template-columns:
-        repeat(4,1fr);
 
-      gap: 12px;
-    }
+/* Navigation */
 
-    .food-item {
-      padding: 25px 15px;
+nav{
 
-      text-align: center;
+display:flex;
 
-      border:
-        1px solid
-        rgba(199,164,122,.16);
+gap:35px;
 
-      background: #0b0b0b;
-    }
+color:#b8b0a6;
 
-    .food-item span {
-      display: block;
+font-size:14px;
 
-      font-size: 18px;
-    }
+}
 
-    .food-item small {
-      display: block;
 
-      margin-top: 7px;
+nav a{
 
-      font-family: Montserrat;
+transition:.25s;
 
-      font-size: 10px;
+}
 
-      color: #817b74;
-    }
 
-    /* ================= CLOSING ================= */
+nav a:hover{
 
-    .closing {
-      max-width: 1180px;
+color:var(--gold-light);
 
-      margin: auto;
+}
 
-      padding:
-        0 30px
-        80px;
 
-      display: flex;
+/* =====================================================
+   HERO
+===================================================== */
 
-      align-items: center;
+.hero{
 
-      gap: 25px;
-    }
+max-width:1180px;
 
-    .closing .line {
-      height: 1px;
+min-height:650px;
 
-      background: var(--line);
+margin:auto;
 
-      flex: 1;
-    }
+display:grid;
 
-    .closing img {
-      width: 58px;
-      height: 58px;
+grid-template-columns:
+1fr 1fr;
 
-      border-radius: 50%;
+align-items:center;
 
-      object-fit: cover;
+padding:70px 30px;
 
-      border: 1px solid var(--gold);
-    }
+position:relative;
 
-    .closing h2 {
-      font-size: 25px;
-    }
+}
 
-    /* ================= FOOTER ================= */
 
-    footer {
-      border-top:
-        1px solid var(--line);
+.hero-content{
 
-      padding: 30px 5%;
+z-index:2;
 
-      display: flex;
+}
 
-      align-items: center;
 
-      justify-content: space-between;
+/* اللوجو الكبير */
 
-      gap: 20px;
+.hero-logo{
 
-      color: #8d8780;
+width:140px;
 
-      font-size: 12px;
-    }
+height:140px;
 
-    footer strong {
-      display: block;
+object-fit:cover;
 
-      font-family: Montserrat;
+border-radius:50%;
 
-      font-size: 18px;
+border:
+1px solid var(--gold-light);
 
-      letter-spacing: 3px;
+box-shadow:
 
-      color: white;
-    }
+0 0 50px
+rgba(199,164,122,.12);
 
-    .footer-links {
-      display: flex;
-      gap: 25px;
-    }
+}
 
-    /* ================= MOBILE ================= */
 
-    @media (max-width: 800px) {
+/* Small title */
 
-      header {
-        height: 68px;
-      }
+.eyebrow{
 
-      nav {
-        display: none;
-      }
+font-family:Montserrat,Arial;
 
-      .hero {
-        grid-template-columns: 1fr;
+letter-spacing:4px;
 
-        text-align: center;
+color:var(--gold);
 
-        padding:
-          65px 25px
-          85px;
-      }
+font-size:11px;
 
-      .hero-logo {
-        width: 105px;
-        height: 105px;
-      }
+margin:
+18px 0 8px;
 
-      .hero-coffee {
-        height: 270px;
-      }
+}
 
-      .cup {
-        transform: scale(.8);
-      }
 
-      .hero-text {
-        font-size: 18px;
-      }
+/* DRABOKA */
 
-      .menu-section {
-        padding:
-          35px 18px
-          70px;
-      }
+h1{
 
-      .menu-grid {
-        grid-template-columns: 1fr;
-      }
+font-family:Montserrat,Arial;
 
-      .wide {
-        grid-column: auto;
-      }
+font-size:
+clamp(52px,9vw,105px);
 
-      .two-col {
-        grid-template-columns: 1fr;
-      }
+letter-spacing:10px;
 
-      .food-grid {
-        grid-template-columns:
-          1fr 1fr;
-      }
+font-weight:600;
 
-      .section-heading h2 {
-        font-size: 34px;
-      }
+line-height:1;
 
-      .closing {
-        padding:
-          0 18px
-          60px;
-      }
+}
 
-      .closing h2 {
-        font-size: 19px;
-      }
 
-      footer {
-        flex-direction: column;
+/* Hero description */
 
-        text-align: center;
-      }
-    }
+.hero-text{
 
-    @media (max-width: 420px) {
+font-size:21px;
 
-      .food-grid {
-        grid-template-columns: 1fr;
-      }
+color:#c7c0b8;
 
-      h1 {
-        font-size: 48px;
+margin:
+20px 0 30px;
 
-        letter-spacing: 7px;
-      }
+}
 
-    }
 
-  </style>
+/* Button */
+
+.hero-button{
+
+display:inline-flex;
+
+padding:
+13px 28px;
+
+border:
+1px solid var(--gold);
+
+color:var(--gold-light);
+
+transition:.25s;
+
+}
+
+
+.hero-button:hover{
+
+background:var(--gold);
+
+color:#080808;
+
+}
+
+
+/* =====================================================
+   COFFEE ILLUSTRATION
+===================================================== */
+
+.hero-coffee{
+
+height:390px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+}
+
+
+/* Cup */
+
+.cup{
+
+width:245px;
+
+height:150px;
+
+position:relative;
+
+border:
+2px solid #4e4b47;
+
+border-radius:
+0 0 120px 120px /
+0 0 70px 70px;
+
+background:
+linear-gradient(
+145deg,
+#191919,
+#050505
+);
+
+box-shadow:
+0 35px 70px
+rgba(0,0,0,.8);
+
+}
+
+
+/* Cup handle */
+
+.cup::after{
+
+content:"";
+
+position:absolute;
+
+right:-65px;
+
+top:25px;
+
+width:70px;
+
+height:65px;
+
+border:
+12px solid #262421;
+
+border-left:0;
+
+border-radius:
+0 45px 45px 0;
+
+}
+
+
+/* Coffee */
+
+.coffee{
+
+position:absolute;
+
+top:-12px;
+
+left:10px;
+
+right:10px;
+
+height:28px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+ellipse at center,
+#d2b086 0 8%,
+#6b4932 10% 42%,
+#24150f 65%
+);
+
+box-shadow:
+0 8px 16px #000;
+
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu-section{
+
+max-width:1180px;
+
+margin:auto;
+
+padding:
+50px 30px
+90px;
+
+position:relative;
+
+}
+
+
+/* عنوان المنيو */
+
+.section-heading{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+margin-bottom:30px;
+
+}
+
+
+.section-heading > span{
+
+font-family:Montserrat;
+
+color:var(--gold);
+
+font-size:12px;
+
+}
+
+
+.section-heading h2{
+
+font-size:42px;
+
+}
+
+
+/* Cards grid */
+
+.menu-grid{
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:18px;
+
+}
+
+
+/* Menu card */
+
+.menu-card{
+
+background:
+linear-gradient(
+145deg,
+rgba(18,18,18,.96),
+rgba(9,9,9,.96)
+);
+
+border:
+1px solid var(--line);
+
+padding:28px;
+
+box-shadow:
+0 20px 50px
+rgba(0,0,0,.18);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+/* العلامة المائية داخل كل كارت */
+
+.menu-card::before{
+
+content:"";
+
+position:absolute;
+
+width:330px;
+
+height:330px;
+
+left:50%;
+
+top:50%;
+
+transform:
+translate(-50%,-50%);
+
+background:
+url("draboka-logo.jpg")
+center/contain
+no-repeat;
+
+opacity:.025;
+
+filter:
+grayscale(100%);
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+
+/* محتوى الكارت فوق العلامة */
+
+.menu-card > *{
+
+position:relative;
+
+z-index:1;
+
+}
+
+
+/* Full width */
+
+.wide{
+
+grid-column:
+1 / -1;
+
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.card-head{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+border-bottom:
+1px solid var(--line);
+
+padding-bottom:16px;
+
+margin-bottom:12px;
+
+}
+
+
+.icon{
+
+font-size:25px;
+
+color:var(--gold-light);
+
+}
+
+
+.card-head h3{
+
+font-size:25px;
+
+}
+
+
+.card-head small{
+
+font-family:Montserrat;
+
+font-size:10px;
+
+letter-spacing:2px;
+
+color:var(--gold);
+
+}
+
+
+/* =====================================================
+   MENU ITEMS
+===================================================== */
+
+ul{
+
+list-style:none;
+
+}
+
+
+li{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+padding:11px 0;
+
+border-bottom:
+1px dashed
+rgba(255,255,255,.08);
+
+}
+
+
+li:last-child{
+
+border-bottom:0;
+
+}
+
+
+li span{
+
+font-size:16px;
+
+}
+
+
+li b{
+
+font-family:Montserrat;
+
+font-size:11px;
+
+font-weight:400;
+
+color:#8e8983;
+
+direction:ltr;
+
+}
+
+
+/* =====================================================
+   TWO COLUMNS
+===================================================== */
+
+.two-col{
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:30px;
+
+}
+
+
+/* =====================================================
+   FOOD
+===================================================== */
+
+.food-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:12px;
+
+}
+
+
+.food-item{
+
+padding:25px 15px;
+
+text-align:center;
+
+border:
+1px solid
+rgba(199,164,122,.16);
+
+background:#0b0b0b;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+.food-item::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+url("draboka-logo.jpg")
+center/160px
+no-repeat;
+
+opacity:.025;
+
+filter:grayscale(100%);
+
+pointer-events:none;
+
+}
+
+
+.food-item span{
+
+display:block;
+
+font-size:18px;
+
+position:relative;
+
+}
+
+
+.food-item small{
+
+display:block;
+
+margin-top:7px;
+
+font-family:Montserrat;
+
+font-size:10px;
+
+color:#817b74;
+
+position:relative;
+
+}
+
+
+/* =====================================================
+   CLOSING
+===================================================== */
+
+.closing{
+
+max-width:1180px;
+
+margin:auto;
+
+padding:
+0 30px
+80px;
+
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+
+.closing .line{
+
+height:1px;
+
+background:var(--line);
+
+flex:1;
+
+}
+
+
+.closing img{
+
+width:58px;
+
+height:58px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:
+1px solid var(--gold);
+
+}
+
+
+.closing h2{
+
+font-size:25px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+border-top:
+1px solid var(--line);
+
+padding:
+30px 5%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:20px;
+
+color:#8d8780;
+
+font-size:12px;
+
+}
+
+
+footer strong{
+
+display:block;
+
+font-family:Montserrat;
+
+font-size:18px;
+
+letter-spacing:3px;
+
+color:white;
+
+}
+
+
+footer span{
+
+font-family:Montserrat;
+
+font-size:9px;
+
+letter-spacing:2px;
+
+}
+
+
+.footer-links{
+
+display:flex;
+
+gap:25px;
+
+}
+
+
+.footer-links a:hover{
+
+color:var(--gold-light);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:800px){
+
+header{
+
+height:68px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+padding:
+65px 25px
+85px;
+
+}
+
+
+.hero-logo{
+
+width:110px;
+
+height:110px;
+
+}
+
+
+.hero-coffee{
+
+height:270px;
+
+}
+
+
+.cup{
+
+transform:
+scale(.8);
+
+}
+
+
+.hero-text{
+
+font-size:18px;
+
+}
+
+
+.menu-section{
+
+padding:
+35px 18px
+70px;
+
+}
+
+
+.menu-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.wide{
+
+grid-column:auto;
+
+}
+
+
+.two-col{
+
+grid-template-columns:1fr;
+
+gap:0;
+
+}
+
+
+.food-grid{
+
+grid-template-columns:
+1fr 1fr;
+
+}
+
+
+.section-heading h2{
+
+font-size:34px;
+
+}
+
+
+.closing{
+
+padding:
+0 18px
+60px;
+
+}
+
+
+.closing h2{
+
+font-size:19px;
+
+}
+
+
+/* Watermark mobile */
+
+.watermark{
+
+width:430px;
+
+height:430px;
+
+opacity:.028;
+
+}
+
+
+/* Card watermark mobile */
+
+.menu-card::before{
+
+width:260px;
+
+height:260px;
+
+}
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media(max-width:420px){
+
+.food-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+h1{
+
+font-size:48px;
+
+letter-spacing:7px;
+
+}
+
+
+.watermark{
+
+width:330px;
+
+height:330px;
+
+}
+
+}
+
+</style>
+
 </head>
+
 
 
 <body>
 
 
+<!-- =====================================================
+     LARGE BACKGROUND WATERMARK
+===================================================== -->
+
+<div class="watermark">
+
+<img
+src="draboka-logo.jpg"
+alt=""
+aria-hidden="true">
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
 
-  <a class="brand" href="#home">
 
-    <img
-      src="draboka-logo.jpg"
-      alt="DRABOKA Logo"
-    >
-
-    <span>DRABOKA</span>
-
-  </a>
+<a
+class="brand"
+href="#home"
+>
 
 
-  <nav>
+<img
+src="draboka-logo.jpg"
+alt="DRABOKA Logo"
+>
 
-    <a href="#home">
-      الرئيسية
-    </a>
 
-    <a href="#menu">
-      المنيو
-    </a>
+<span>
+DRABOKA
+</span>
 
-    <a href="#contact">
-      تواصل
-    </a>
 
-  </nav>
+</a>
+
+
+
+<nav>
+
+
+<a href="#home">
+الرئيسية
+</a>
+
+
+<a href="#menu">
+المنيو
+</a>
+
+
+<a href="#contact">
+تواصل
+</a>
+
+
+</nav>
+
 
 </header>
 
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main id="home">
 
 
-<!-- ================= HERO ================= -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-  <div class="hero-content">
 
-    <img
-      class="hero-logo"
-      src="draboka-logo.jpg"
-      alt="DRABOKA"
-    >
-
-    <p class="eyebrow">
-      COFFEE • JUICES • FOOD
-    </p>
-
-    <h1>
-      DRABOKA
-    </h1>
-
-    <p class="hero-text">
-      منيو الدربوكة — اختار مزاجك.
-    </p>
-
-    <a
-      class="hero-button"
-      href="#menu"
-    >
-      شوف المنيو
-    </a>
-
-  </div>
+<div class="hero-content">
 
 
-  <div class="hero-coffee">
-
-    <div class="cup">
-
-      <div class="coffee"></div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ================= MENU ================= -->
-
-<section
-  id="menu"
-  class="menu-section"
+<img
+class="hero-logo"
+src="draboka-logo.jpg"
+alt="DRABOKA"
 >
 
 
-  <div class="section-heading">
+<p class="eyebrow">
 
-    <span>
-      01
-    </span>
+COFFEE • JUICES • FOOD
 
-    <div>
+</p>
 
-      <p class="eyebrow">
-        OUR MENU
-      </p>
 
-      <h2>
-        المنيو
-      </h2>
+<h1>
 
-    </div>
+DRABOKA
 
-  </div>
+</h1>
 
 
+<p class="hero-text">
 
-  <div class="menu-grid">
+منيو الدربوكة — اختار مزاجك.
 
+</p>
 
 
-    <!-- HOT COFFEE -->
+<a
+class="hero-button"
+href="#menu"
+>
 
-    <article class="menu-card">
+شوف المنيو
 
-      <div class="card-head">
+</a>
 
-        <span class="icon">
-          ☕
-        </span>
 
-        <div>
+</div>
 
-          <h3>
-            قهوة ساخنة
-          </h3>
 
-          <small>
-            HOT COFFEE
-          </small>
 
-        </div>
+<div class="hero-coffee">
 
-      </div>
 
+<div class="cup">
 
-      <ul>
+<div class="coffee"></div>
 
-        <li>
-          <span>إسبريسو</span>
-          <b>Espresso</b>
-        </li>
+</div>
 
-        <li>
-          <span>دبل إسبريسو</span>
-          <b>Double Espresso</b>
-        </li>
 
-        <li>
-          <span>أمريكانو</span>
-          <b>Americano</b>
-        </li>
+</div>
 
-        <li>
-          <span>كابتشينو</span>
-          <b>Cappuccino</b>
-        </li>
-
-        <li>
-          <span>لاتيه</span>
-          <b>Latte</b>
-        </li>
-
-        <li>
-          <span>فلات وايت</span>
-          <b>Flat White</b>
-        </li>
-
-        <li>
-          <span>موكا</span>
-          <b>Mocha</b>
-        </li>
-
-        <li>
-          <span>قهوة تركية</span>
-          <b>Turkish Coffee</b>
-        </li>
-
-      </ul>
-
-    </article>
-
-
-
-    <!-- ICED COFFEE -->
-
-    <article class="menu-card">
-
-      <div class="card-head">
-
-        <span class="icon">
-          ❄
-        </span>
-
-        <div>
-
-          <h3>
-            قهوة ساقعة
-          </h3>
-
-          <small>
-            ICED COFFEE
-          </small>
-
-        </div>
-
-      </div>
-
-
-      <ul>
-
-        <li>
-          <span>آيس لاتيه</span>
-          <b>Iced Latte</b>
-        </li>
-
-        <li>
-          <span>آيس أمريكانو</span>
-          <b>Iced Americano</b>
-        </li>
-
-        <li>
-          <span>آيس موكا</span>
-          <b>Iced Mocha</b>
-        </li>
-
-        <li>
-          <span>آيس كراميل</span>
-          <b>Iced Caramel</b>
-        </li>
-
-        <li>
-          <span>آيس فانيليا</span>
-          <b>Iced Vanilla</b>
-        </li>
-
-      </ul>
-
-    </article>
-
-
-
-    <!-- JUICES -->
-
-    <article class="menu-card wide">
-
-      <div class="card-head">
-
-        <span class="icon">
-          🍹
-        </span>
-
-        <div>
-
-          <h3>
-            عصاير وسموزيهات
-          </h3>
-
-          <small>
-            JUICES & SMOOTHIES
-          </small>
-
-        </div>
-
-      </div>
-
-
-      <div class="two-col">
-
-
-        <ul>
-
-          <li>
-            <span>عصير مانجو</span>
-            <b>Mango Juice</b>
-          </li>
-
-          <li>
-            <span>عصير فراولة</span>
-            <b>Strawberry Juice</b>
-          </li>
-
-          <li>
-            <span>عصير برتقال</span>
-            <b>Orange Juice</b>
-          </li>
-
-          <li>
-            <span>عصير ليمون</span>
-            <b>Lemon Juice</b>
-          </li>
-
-          <li>
-            <span>عصير جوافة</span>
-            <b>Guava Juice</b>
-          </li>
-
-        </ul>
-
-
-        <ul>
-
-          <li>
-            <span>سموزي فراولة</span>
-            <b>Strawberry Smoothie</b>
-          </li>
-
-          <li>
-            <span>سموزي مانجو</span>
-            <b>Mango Smoothie</b>
-          </li>
-
-          <li>
-            <span>سموزي ميكس بيري</span>
-            <b>Mixed Berry Smoothie</b>
-          </li>
-
-          <li>
-            <span>سموزي موز</span>
-            <b>Banana Smoothie</b>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </article>
-
-
-
-    <!-- FOOD -->
-
-    <article class="menu-card wide">
-
-      <div class="card-head">
-
-        <span class="icon">
-          ✦
-        </span>
-
-        <div>
-
-          <h3>
-            أكلات وحلويات
-          </h3>
-
-          <small>
-            FOOD & DESSERTS
-          </small>
-
-        </div>
-
-      </div>
-
-
-      <div class="food-grid">
-
-
-        <div class="food-item">
-
-          <span>
-            كسكسي
-          </span>
-
-          <small>
-            Couscous
-          </small>
-
-        </div>
-
-
-        <div class="food-item">
-
-          <span>
-            حمص الشام
-          </span>
-
-          <small>
-            Hummus El Sham
-          </small>
-
-        </div>
-
-
-        <div class="food-item">
-
-          <span>
-            أم علي
-          </span>
-
-          <small>
-            Om Ali
-          </small>
-
-        </div>
-
-
-        <div class="food-item">
-
-          <span>
-            وافل
-          </span>
-
-          <small>
-            Waffle
-          </small>
-
-        </div>
-
-
-      </div>
-
-    </article>
-
-
-  </div>
 
 </section>
 
 
 
-<!-- ================= CLOSING ================= -->
+<!-- =====================================================
+     MENU
+===================================================== -->
+
+<section
+id="menu"
+class="menu-section"
+>
+
+
+<div class="section-heading">
+
+
+<span>
+01
+</span>
+
+
+<div>
+
+
+<p class="eyebrow">
+OUR MENU
+</p>
+
+
+<h2>
+المنيو
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="menu-grid">
+
+
+
+<!-- =====================================================
+     HOT COFFEE
+===================================================== -->
+
+<article class="menu-card">
+
+
+<div class="card-head">
+
+
+<span class="icon">
+☕
+</span>
+
+
+<div>
+
+
+<h3>
+قهوة ساخنة
+</h3>
+
+
+<small>
+HOT COFFEE
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<span>
+إسبريسو
+</span>
+
+<b>
+Espresso
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+دبل إسبريسو
+</span>
+
+<b>
+Double Espresso
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+أمريكانو
+</span>
+
+<b>
+Americano
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+كابتشينو
+</span>
+
+<b>
+Cappuccino
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+لاتيه
+</span>
+
+<b>
+Latte
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+فلات وايت
+</span>
+
+<b>
+Flat White
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+موكا
+</span>
+
+<b>
+Mocha
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+قهوة تركية
+</span>
+
+<b>
+Turkish Coffee
+</b>
+
+</li>
+
+
+</ul>
+
+
+</article>
+
+
+
+<!-- =====================================================
+     ICED COFFEE
+===================================================== -->
+
+<article class="menu-card">
+
+
+<div class="card-head">
+
+
+<span class="icon">
+❄
+</span>
+
+
+<div>
+
+
+<h3>
+قهوة ساقعة
+</h3>
+
+
+<small>
+ICED COFFEE
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<span>
+آيس لاتيه
+</span>
+
+<b>
+Iced Latte
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+آيس أمريكانو
+</span>
+
+<b>
+Iced Americano
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+آيس موكا
+</span>
+
+<b>
+Iced Mocha
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+آيس كراميل
+</span>
+
+<b>
+Iced Caramel
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+آيس فانيليا
+</span>
+
+<b>
+Iced Vanilla
+</b>
+
+</li>
+
+
+</ul>
+
+
+</article>
+
+
+
+<!-- =====================================================
+     JUICES & SMOOTHIES
+===================================================== -->
+
+<article class="menu-card wide">
+
+
+<div class="card-head">
+
+
+<span class="icon">
+🍹
+</span>
+
+
+<div>
+
+
+<h3>
+عصاير وسموزيهات
+</h3>
+
+
+<small>
+JUICES & SMOOTHIES
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="two-col">
+
+
+<ul>
+
+
+<li>
+
+<span>
+عصير مانجو
+</span>
+
+<b>
+Mango Juice
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+عصير فراولة
+</span>
+
+<b>
+Strawberry Juice
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+عصير برتقال
+</span>
+
+<b>
+Orange Juice
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+عصير ليمون
+</span>
+
+<b>
+Lemon Juice
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+عصير جوافة
+</span>
+
+<b>
+Guava Juice
+</b>
+
+</li>
+
+
+</ul>
+
+
+
+<ul>
+
+
+<li>
+
+<span>
+سموزي فراولة
+</span>
+
+<b>
+Strawberry Smoothie
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+سموزي مانجو
+</span>
+
+<b>
+Mango Smoothie
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+سموزي ميكس بيري
+</span>
+
+<b>
+Mixed Berry Smoothie
+</b>
+
+</li>
+
+
+<li>
+
+<span>
+سموزي موز
+</span>
+
+<b>
+Banana Smoothie
+</b>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =====================================================
+     FOOD & DESSERTS
+===================================================== -->
+
+<article class="menu-card wide">
+
+
+<div class="card-head">
+
+
+<span class="icon">
+✦
+</span>
+
+
+<div>
+
+
+<h3>
+أكلات وحلويات
+</h3>
+
+
+<small>
+FOOD & DESSERTS
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="food-grid">
+
+
+
+<div class="food-item">
+
+<span>
+كسكسي
+</span>
+
+<small>
+Couscous
+</small>
+
+</div>
+
+
+
+<div class="food-item">
+
+<span>
+حمص الشام
+</span>
+
+<small>
+Hummus El Sham
+</small>
+
+</div>
+
+
+
+<div class="food-item">
+
+<span>
+أم علي
+</span>
+
+<small>
+Om Ali
+</small>
+
+</div>
+
+
+
+<div class="food-item">
+
+<span>
+وافل
+</span>
+
+<small>
+Waffle
+</small>
+
+</div>
+
+
+
+</div>
+
+
+</article>
+
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CLOSING
+===================================================== -->
 
 <section class="closing">
 
-  <div class="line"></div>
 
-  <img
-    src="draboka-logo.jpg"
-    alt="DRABOKA"
-  >
+<div class="line"></div>
 
-  <div>
 
-    <p class="eyebrow">
-      DRABOKA COFFEE
-    </p>
+<img
+src="draboka-logo.jpg"
+alt="DRABOKA"
+>
 
-    <h2>
-      مزاجك يبدأ من هنا.
-    </h2>
 
-  </div>
+<div>
 
-  <div class="line"></div>
+
+<p class="eyebrow">
+DRABOKA COFFEE
+</p>
+
+
+<h2>
+مزاجك يبدأ من هنا.
+</h2>
+
+
+</div>
+
+
+<div class="line"></div>
+
 
 </section>
+
 
 
 </main>
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer id="contact">
 
-  <div>
 
-    <strong>
-      DRABOKA
-    </strong>
-
-    <span>
-      COFFEE & MORE
-    </span>
-
-  </div>
+<div>
 
 
-  <div class="footer-links">
-
-    <a href="#home">
-      الرئيسية
-    </a>
-
-    <a href="#menu">
-      المنيو
-    </a>
-
-  </div>
+<strong>
+DRABOKA
+</strong>
 
 
-  <p>
-    © 2026 DRABOKA
-  </p>
+<span>
+COFFEE & MORE
+</span>
+
+
+</div>
+
+
+
+<div class="footer-links">
+
+
+<a href="#home">
+الرئيسية
+</a>
+
+
+<a href="#menu">
+المنيو
+</a>
+
+
+</div>
+
+
+
+<p>
+
+© 2026 DRABOKA
+
+</p>
+
 
 </footer>
 
 
 </body>
+
 </html>
